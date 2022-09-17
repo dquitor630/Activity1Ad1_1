@@ -4,9 +4,9 @@ import java.io.File;
 import java.util.Scanner;
 
 
-public class Main {
+public class Activity1 {
     public static void main(String[] args) {
-        new Main().pruebas();
+        new Activity1().pruebas();
     }
 
     void pruebas(){
