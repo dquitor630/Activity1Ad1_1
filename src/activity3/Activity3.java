@@ -1,7 +1,7 @@
 package activity3;
 import java.io.File;
+import java.util.Objects;
 import java.util.Scanner;
-
 public class Activity3 {
     public static void main(String[] args) {
         new Activity3().pruebas();
@@ -27,12 +27,9 @@ public class Activity3 {
         return file;
     }
     public void listFiles(File file, int i){
-        File[] dir = file.listFiles();
-        String space = "";
-        for(int j = 0; j<=i;j++){
-            space = space + " ";
-        }
-        for (File f : dir) {
+        StringBuilder space = new StringBuilder();
+        space.append(" ".repeat(i));
+        for (File f : Objects.requireNonNull(file.listFiles())) {
             if (f.isDirectory()){
                 System.out.printf(space + f.getName() + Colors.GREEN + " Directory\n" + Colors.WHITE);
                 listFiles(f, i + 2);
