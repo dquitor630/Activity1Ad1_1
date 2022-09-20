@@ -8,8 +8,8 @@ public class Activity3 {
     }
     void pruebas(){
         File dir = requestDirectory();
-        System.out.println(dir.getName());
-        listFiles(dir, 0);
+        System.out.println(Colors.WHITE + dir.getName() + Colors.GREEN + " Directory" + Colors.WHITE);
+        listFiles(dir, 2);
     }
     public File requestDirectory() {
         Scanner keyboard = new Scanner(System.in);
