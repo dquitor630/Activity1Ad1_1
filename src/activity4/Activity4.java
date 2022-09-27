@@ -2,7 +2,9 @@ package activity4;
 
 
 import java.io.File;
+import java.util.Objects;
 import java.util.Scanner;
+
 
 public class Activity4 {
     public static void main(String[] args){
@@ -14,7 +16,7 @@ public class Activity4 {
         System.out.println("Por favor, inserte la extensión sin punto que desea buscar");
         String extension = keyboard.nextLine();
         File[] validFiles = dir.listFiles((dir1, name) -> name.endsWith(extension));
-        for(File f : validFiles){
+        for(File f : Objects.requireNonNull(validFiles)){
             System.out.println(f.getName());
         }
     }
