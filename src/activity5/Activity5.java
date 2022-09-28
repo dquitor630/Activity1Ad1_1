@@ -1,10 +1,6 @@
 package activity5;
-
-
 import java.io.*;
 import java.util.Scanner;
-
-@SuppressWarnings("ResultOfMethodCallIgnored")
 public class Activity5 {
     private final Scanner keyboard = new Scanner(System.in);
     public static void main(String[] args) throws IOException {
@@ -24,13 +20,10 @@ public class Activity5 {
         do{
             System.out.println("please insert the path of the source file you want to access: ");
             source = new File(keyboard.nextLine());
-            if(source.isFile()){
-                exit = true;
-            }else{
-                System.out.println("the source is not a file, please try again.");
+            if(!source.isFile()){
+                System.out.println("the source is not a file, please try again");
             }
-        }while (!exit);
-        exit = false;
+        }while (source.isFile());
         System.out.println("please insert the path of the destination file or directory you want to access: ");
         destination = new File(keyboard.nextLine());
         do{
@@ -47,7 +40,6 @@ public class Activity5 {
         }while(!exit);
         if (destination.isDirectory()){
             destinationFile = new File(destination.getAbsolutePath(), source.getName());
-            destinationFile.createNewFile();
             buffRead = new BufferedReader(new FileReader(source.getAbsolutePath()));
             buffWrite = new BufferedWriter(new FileWriter(destinationFile.getAbsolutePath()));
             while ((line = buffRead.readLine()) != null){
