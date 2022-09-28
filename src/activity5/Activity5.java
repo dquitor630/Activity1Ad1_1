@@ -54,6 +54,7 @@ public class Activity5 {
                 buffWrite.write(line + "\n");
             }
             buffWrite.close();
+            buffRead.close();
         }else{
             reader = new FileReader(source);
             if(option){
@@ -63,6 +64,7 @@ public class Activity5 {
                         writer.write(buff, 0, buff.length);
                     }
                     writer.close();
+                    reader.close();
                 }else{
                     throw new IllegalArgumentException("file don´t exist");
                 }
@@ -73,6 +75,7 @@ public class Activity5 {
                         writer.write(i);
                     }
                     writer.close();
+                    reader.close();
                 }else{
                     System.out.println("the copy wasn't able to finish");
                 }
