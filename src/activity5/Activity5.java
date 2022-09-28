@@ -23,7 +23,7 @@ public class Activity5 {
             if(!source.isFile()){
                 System.out.println("the source is not a file, please try again");
             }
-        }while (source.isFile());
+        }while (!source.isFile());
         System.out.println("please insert the path of the destination file or directory you want to access: ");
         destination = new File(keyboard.nextLine());
         do{
