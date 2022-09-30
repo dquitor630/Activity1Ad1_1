@@ -18,7 +18,7 @@ public class Activity6 {
         FileReader[] readers = new FileReader[3];
         BufferedReader buffRead1, buffRead2;
         char[] buff = new char[15];
-        int i, j, k, total;
+        int i, j, k;
         readers[0] = new FileReader(source);
         for(i = 0; i < files.length;i++){
             files[i] = new File("C:\\Users\\diego\\Desktop\\Prueba\\" + (i + 1) + ".txt");
@@ -45,8 +45,7 @@ public class Activity6 {
             readers[i] = new FileReader(files[i]);
         }
         while(( i = readers[0].read(buff,0,5)) != -1 && (j = readers[1].read(buff,5,5)) != 1 && (k = readers[2].read(buff,10,5)) != 1){
-            total = i + j + k;
-            writers[0].write(buff, 0, total);
+            writers[0].write(buff, 0, i + j + k);
         }
         closeWriter(writers);
         closeReaders(readers);
@@ -82,7 +81,7 @@ public class Activity6 {
     public boolean compareFiles(BufferedReader buffRead1, BufferedReader buffRead2) throws IOException {
         String line1, line2;
         boolean same = true;
-        while ((line1 = buffRead1.readLine()) != null && (line2 = buffRead2.readLine()) != null){
+        while ((line1 = buffRead1.readLine()) != null && (line2 = buffRead2.readLine()) != null && same){
             if(line1.compareTo(line2) != 0){
                 same = false;
             }
