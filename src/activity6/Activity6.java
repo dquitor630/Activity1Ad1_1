@@ -81,7 +81,7 @@ public class Activity6 {
     public boolean compareFiles(BufferedReader buffRead1, BufferedReader buffRead2) throws IOException {
         String line1, line2;
         boolean same = true;
-        while ((line1 = buffRead1.readLine()) != null && (line2 = buffRead2.readLine()) != null && same){
+        while (same && (line1 = buffRead1.readLine()) != null && (line2 = buffRead2.readLine()) != null){
             if(line1.compareTo(line2) != 0){
                 same = false;
             }
