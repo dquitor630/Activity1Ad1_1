@@ -44,9 +44,25 @@ public class Activity6 {
         for(i = 0; i < readers.length; i++){
             readers[i] = new FileReader(files[i]);
         }
-        while(( i = readers[0].read(buff,0,5)) != -1 && (j = readers[1].read(buff,5,5)) != 1 && (k = readers[2].read(buff,10,5)) != 1){
-            writers[0].write(buff, 0, i + j + k);
-        }
+
+        do {
+            i = readers[0].read(buff, 0, 5);
+            j = readers[1].read(buff, 5, 5);
+            k = readers[2].read(buff, 10, 5);
+            if (i + j + k == buff.length) {
+                writers[0].write(buff);
+            }else {
+                if (i != -1) {
+                    if (j == -1) {
+                        writers[0].write(buff, 0, i);
+                    } else if (k == -1) {
+                        writers[0].write(buff, 0, i + j);
+                    } else {
+                        writers[0].write(buff, 0, i + j + k);
+                    }
+                }
+            }
+        }while( i != -1 && j != -1 && k != -1);
         closeWriter(writers);
         closeReaders(readers);
         buffRead1 = new BufferedReader(new FileReader(source));
