@@ -1,8 +1,6 @@
 package activity7;
-
 import java.io.*;
 import java.util.Scanner;
-
 public class Activity7 {
     Scanner keyboard = new Scanner(System.in);
     public static void main(String[] args) throws IOException {
@@ -38,7 +36,7 @@ public class Activity7 {
             if (file.isDirectory()){
                 System.out.println("this path is not a file, please try again");
             }
-        } while (file.isDirectory());
+        } while (file.isDirectory() && !file.exists());
         return file;
     }
 }
