@@ -72,7 +72,6 @@ public class Main {
             }
         }catch (EOFException ignored){}
         dataIS.close();
-
     }
     public static class MiObjectOutputStream extends ObjectOutputStream {
         public MiObjectOutputStream(OutputStream out) throws IOException {
