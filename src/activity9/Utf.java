@@ -4,10 +4,8 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.time.LocalDate;
 import java.util.Scanner;
-public class Chars {
-
-
-    private final static int BYTES = 89;
+public class Utf {
+    private final static int BYTES = 93;
     private ConsoleInput console = new ConsoleInput(new Scanner(System.in));
 
     void pruebas() throws IOException {
