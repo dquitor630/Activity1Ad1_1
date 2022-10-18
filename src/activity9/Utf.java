@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Utf {
-    private final static int BYTES = 93;
+    private final static int BYTES = 82;
     private ConsoleInput console = new ConsoleInput(new Scanner(System.in));
 
     void pruebas() throws IOException {
@@ -91,6 +91,7 @@ public class Utf {
             postalCode = random.readInt();
             lease = random.readBoolean();
             quantity = random.readDouble();
+            System.out.println(random.getFilePointer());
             if (exist) {
                 System.out.printf(" Id: %d Name: %s Address: %s Phone: %d Postal Code: %s lease: %s quantity: %f\n", id, name.trim(), address.trim(), phone, postalCode, lease ? "yes" : "no", quantity);
             } else {
@@ -106,9 +107,9 @@ public class Utf {
         Contacto contacto = createContact();
         RandomAccessFile random = new RandomAccessFile(file, "rw");
         StringBuilder buffer1, buffer2;
-        buffer1 = new StringBuilder(contacto.getContactName());
+        buffer1 = new StringBuilder(contacto.getContactName().trim());
         buffer1.setLength(15);
-        buffer2 = new StringBuilder(contacto.getAddress());
+        buffer2 = new StringBuilder(contacto.getAddress().trim());
         buffer2.setLength(20);
         random.seek(file.length());
         random.writeByte((int) (file.length() / BYTES + 1));
