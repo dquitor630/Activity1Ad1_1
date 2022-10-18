@@ -5,11 +5,8 @@ import java.io.RandomAccessFile;
 import java.time.LocalDate;
 import java.util.Scanner;
 public class Chars {
-
-
     private final static int BYTES = 89;
     private ConsoleInput console = new ConsoleInput(new Scanner(System.in));
-
     void pruebas() throws IOException {
         File file;
         int option;
@@ -48,7 +45,6 @@ public class Chars {
             }
         }while (!exit);
     }
-
     public void queryAll(File file) throws IOException {
         RandomAccessFile random = new RandomAccessFile(file, "rw");
         char[] name = new char[15];
@@ -154,7 +150,7 @@ public class Chars {
                 random.writeDouble(contacto.getLeaseQuantity());
                 writed = true;
             }else{
-                random.seek(random.getFilePointer() + 87);
+                random.seek(random.getFilePointer() + BYTES - 2);
             }
         }
         random.close();
@@ -192,7 +188,7 @@ public class Chars {
             quantity = 0.0;
         }
         if(random.length() > id * BYTES - 1){
-            random.seek((id - 1) * BYTES + 80);
+            random.seek((id - 1) * BYTES + (BYTES - 9));
             random.writeBoolean(lease);
             random.writeDouble(quantity);
         }else{
@@ -200,7 +196,6 @@ public class Chars {
         }
         random.close();
     }
-
     void compactFile(File file) throws IOException {
         RandomAccessFile random = new RandomAccessFile(file, "rw");
         File fileCopy = new File(file.getParent() + "/b.dat");
@@ -233,7 +228,7 @@ public class Chars {
                 randomCopy.writeDouble(random.readDouble());
                 id++;
             }else{
-                random.seek(random.getFilePointer() + 87);
+                random.seek(random.getFilePointer() + BYTES - 2);
             }
         }
         random.close();
