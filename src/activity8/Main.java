@@ -18,7 +18,7 @@ public class Main {
         generateFileSerialized(contactos);
     }
     void generateFile(ArrayList<Contacto> contactos) throws IOException {
-        File file = new File("C:\\Users\\diego\\Desktop\\binario\\File.dat");
+        File file = new File("C:\\contacts.dat");
         DataOutputStream dataOS = new DataOutputStream(new FileOutputStream(file));
         DataInputStream dataIS = new DataInputStream(new FileInputStream(file));
         for(Contacto c : contactos){
