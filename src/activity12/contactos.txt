@@ -1,0 +1,19 @@
+
+  
+    Diego
+    calle colon
+    424242
+    11300
+    2003-05-14
+    true
+    19.9
+  
+  
+    Pepe
+    calle pepon
+    342432
+    11200
+    2001-02-14
+    false
+    0.0
+  
