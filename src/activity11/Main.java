@@ -32,15 +32,13 @@ public class Main {
         FileInputStream fileIn2 = new FileInputStream(file2);
         int i, j;
         boolean same = true;
-        while(same && (i = fileIn.read()) != -1){
-            if((j = fileIn2.read()) != -1){
-                if(!(j == i)){
-                    same = false;
-                }
-            }else{
+        do{
+            i = fileIn.read();
+            j = fileIn2.read();
+            if(!(j == i)){
                 same = false;
             }
-        }
+        }while(same && (i  != -1));
         return same;
     }
     void generateFile(ArrayList<Contacto> contactos) throws IOException {

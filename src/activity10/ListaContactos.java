@@ -1,5 +1,7 @@
 package activity10;
 
+import activity8.Contacto;
+
 import java.util.ArrayList;
 import java.util.List;
 

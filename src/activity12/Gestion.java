@@ -22,7 +22,7 @@ public class Gestion extends DefaultHandler {
         for(int i = 0; i < atts.getLength(); i++){
             System.out.print(atts.getValue(i));
             try {
-                writer.write(atts.getValue(i));
+                writer.write(atts.getValue(i) + " ");
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

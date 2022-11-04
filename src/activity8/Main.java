@@ -40,7 +40,7 @@ public class Main {
     }
 
     void generateFileSerialized(ArrayList<Contacto> contactos) throws IOException, ClassNotFoundException {
-        File file = new File("C:\\Users\\diego\\Desktop\\binario\\FileO.dat");
+        File file = new File("C:\\FileO.dat");
         Scanner keyboard = new Scanner(System.in);
         boolean overwrite = false, exit = false;
         String selection;

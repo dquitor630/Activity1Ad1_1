@@ -1,16 +1,14 @@
 package activity10;
+import activity8.Contacto;
 import com.thoughtworks.xstream.XStream;
 import java.io.*;
-import java.time.LocalDate;
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         new Main().pruebas();
     }
-    void pruebas() {
+    void pruebas() throws IOException {
         XStream xStream = new XStream();
-        ListaContactos contacts = new ListaContactos();
-        contacts.add(new Contacto("Diego Quirós", 678239920, "Calle colon n62 p6", 11300, true, 10.0, LocalDate.of(2003, 5, 14)));
-        contacts.add(new Contacto("Pepe Torres", 612565487, "Calle pedrosa n62 p6", 12333, false, 0.0, LocalDate.of(1999, 11, 13)));
+        ListaContactos contacts = leer();
         try {
             xStream.alias("ListaContactos", ListaContactos.class);
             xStream.alias("DatosContacto", Contacto.class);
@@ -19,5 +17,25 @@ public class Main {
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+
+
+    ListaContactos leer() throws IOException {
+        Contacto contacto;
+        ListaContactos contacts = new ListaContactos();
+        ObjectInputStream dataIS;
+        File file = new File("C:\\fileO.dat");
+        dataIS = new ObjectInputStream(new FileInputStream(file));
+        try{
+            while(true){
+                contacto = (Contacto) dataIS.readObject();
+                contacts.add(contacto);
+            }
+        }catch (EOFException ignored){} catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        dataIS.close();
+        return contacts;
     }
 }
