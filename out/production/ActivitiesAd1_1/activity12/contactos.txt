@@ -1,0 +1,2 @@
+ Diego Quirós La Linea Calle colon n62 p6 +34 678239920  11300  2003-05-14  true euro 10.0 
+ Pepe Torres Algeciras Calle pedrosa n62 p6 +34 612565487  12333  1999-11-13  false euro 0.0 
