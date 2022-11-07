@@ -13,7 +13,7 @@ public class Main {
             xStream.alias("ListaContactos", ListaContactos.class);
             xStream.alias("DatosContacto", Contacto.class);
             xStream.addImplicitCollection(ListaContactos.class, "contacts");
-            xStream.toXML(contacts, new FileOutputStream("c:\\contactos.xml"));
+            xStream.toXML(contacts, new FileOutputStream("src\\activity10\\contactos.xml"));
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -25,7 +25,7 @@ public class Main {
         Contacto contacto;
         ListaContactos contacts = new ListaContactos();
         ObjectInputStream dataIS;
-        File file = new File("C:\\fileO.dat");
+        File file = new File("src\\Activity8\\fileO.dat");
         dataIS = new ObjectInputStream(new FileInputStream(file));
         try{
             while(true){

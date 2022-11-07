@@ -12,7 +12,7 @@ public class Activity6 {
     }
     @SuppressWarnings("resource")
     void main() throws IOException {
-        File source = requestFile(), sourceCopy = new File("C:\\Users\\diego\\Desktop\\Prueba\\sourceCopy.txt");
+        File source = requestFile(), sourceCopy = new File("src\\activity6\\copy.txt");
         File[] files = new File[3];
         FileWriter[] writers = new FileWriter[3];
         FileReader[] readers = new FileReader[3];
@@ -21,7 +21,7 @@ public class Activity6 {
         int i, j, k;
         readers[0] = new FileReader(source);
         for(i = 0; i < files.length;i++){
-            files[i] = new File("C:\\Users\\diego\\Desktop\\Prueba\\" + (i + 1) + ".txt");
+            files[i] = new File("src\\activity6\\" + (i + 1) + ".txt");
         }
         for( i =  0;i < writers.length; i++){
             writers[i] = new FileWriter(files[i]);

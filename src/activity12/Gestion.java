@@ -17,7 +17,7 @@ public class Gestion extends DefaultHandler {
     public Gestion() throws IOException {
         super();
         data = new String[7];
-        file = new File("C:\\Users\\diego\\IdeaProjects\\ActivityAd1_1\\src\\activity12\\contactos.txt");
+        file = new File("src\\activity12\\contactos.txt");
         writer = new FileWriter(file);
         file.createNewFile();
     }

@@ -18,7 +18,7 @@ public class Main {
         generateFileSerialized(contactos);
     }
     void generateFile(ArrayList<Contacto> contactos) throws IOException {
-        File file = new File("C:\\contacts.dat");
+        File file = new File("src\\activity8\\contacts.dat");
         DataOutputStream dataOS = new DataOutputStream(new FileOutputStream(file));
         DataInputStream dataIS = new DataInputStream(new FileInputStream(file));
         for(Contacto c : contactos){
@@ -40,7 +40,7 @@ public class Main {
     }
 
     void generateFileSerialized(ArrayList<Contacto> contactos) throws IOException, ClassNotFoundException {
-        File file = new File("C:\\FileO.dat");
+        File file = new File("src\\Activity8\\FileO.dat");
         Scanner keyboard = new Scanner(System.in);
         boolean overwrite = false, exit = false;
         String selection;

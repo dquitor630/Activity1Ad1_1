@@ -13,7 +13,7 @@ public class Main {
         XMLReader procesadorXML = XMLReaderFactory.createXMLReader();
         Gestion gestor = new Gestion();
         procesadorXML.setContentHandler(gestor);
-        InputSource fileXML = new InputSource("C:\\Users\\diego\\IdeaProjects\\ActivityAd1_1\\src\\activity12\\contactos.xml");
+        InputSource fileXML = new InputSource("src\\activity12\\contactos.xml");
         procesadorXML.parse(fileXML);
     }
 }

@@ -17,10 +17,10 @@ public class Main {
             xStream.alias("ListaContactos", ListaContactos.class);
             xStream.alias("DatosContacto", Contacto.class);
             xStream.addImplicitCollection(ListaContactos.class, "contacts");
-            contacts = (ListaContactos) xStream.fromXML(new FileInputStream("c:\\contactos.xml"));
+            contacts = (ListaContactos) xStream.fromXML(new FileInputStream("src\\activity11\\contactos.xml"));
             contactList = contacts.getListaContactos();
             generateFile(contactList);
-            System.out.println(compareFiles(new File("C:\\contacts.dat"), new File("C:\\contactsXml.dat")));
+            System.out.println(compareFiles(new File("src\\activity8\\contacts.dat"), new File("src\\activity11\\contactsXml.dat")));
 
     }
 
@@ -42,7 +42,7 @@ public class Main {
         return same;
     }
     void generateFile(ArrayList<Contacto> contactos) throws IOException {
-        File file = new File("C:\\contactsXml.dat");
+        File file = new File("src\\activity11\\contactsXml.dat");
         DataOutputStream dataOS = new DataOutputStream(new FileOutputStream(file));
         DataInputStream dataIS = new DataInputStream(new FileInputStream(file));
         for(Contacto c : contactos){

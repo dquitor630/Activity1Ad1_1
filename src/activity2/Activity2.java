@@ -10,7 +10,7 @@ public class Activity2 {
         new Activity2().pruebas();
     }
     void pruebas() throws IOException{
-        File dir = new File("directorio");
+        File dir = new File("src\\activity2\\directorio");
         dir.mkdir();
         File first = new File(dir, "1.txt");
         File second = new File(dir, "2.txt");
@@ -23,7 +23,7 @@ public class Activity2 {
         third.createNewFile();
         subDirFile.createNewFile();
         second.delete();
-        third.renameTo(new File("tercero.txt"));
+        third.renameTo(new File(dir,"tercero.txt"));
         System.out.println("Ruta absoluta del primer directorio: " + dir.getAbsolutePath() + "\nContenido:\n");
         listarDirectorio(dir);
         System.out.println("\nRuta absoluta del subdirectorio: " + subDir.getAbsolutePath() + "\nContenido:\n");
