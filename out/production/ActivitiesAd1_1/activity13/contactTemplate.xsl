@@ -11,7 +11,7 @@
         <th>Name</th>
         <th>Address</th>
         <th>Phone</th>
-        <th>PC</th>>
+        <th>PC</th>
         <th>BirthDate</th>
         <th>Lease</th>
         <th>Lease Quantity</th>

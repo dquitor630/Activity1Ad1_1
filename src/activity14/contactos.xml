@@ -1,0 +1,20 @@
+<ListaContactos>
+  <DatosContacto>
+    <contactName>Diego Quirós</contactName>
+    <address city="La Linea">Calle colon n62 p6</address>
+    <phone prefix="+34">678239920</phone>
+    <postalCode>11300</postalCode>
+    <birthDate>2003-05-14</birthDate>
+    <lease>true</lease>
+    <leaseQuantity coin="euro">10.0</leaseQuantity>
+  </DatosContacto>
+  <DatosContacto>
+    <contactName>Pepe Torres</contactName>
+    <address city="Algeciras">Calle pedrosa n62 p6</address>
+    <phone prefix="+34">612565487</phone>
+    <postalCode>12333</postalCode>
+    <birthDate>1999-11-13</birthDate>
+    <lease>false</lease>
+    <leaseQuantity coin="euro">0.0</leaseQuantity>
+  </DatosContacto>
+</ListaContactos>
