@@ -1,0 +1,21 @@
+********************************************************************************
+                              Agenda De Contactos                               
+********************************************************************************
+Nombre:             Diego Quirós
+Teléfono:           678239920
+Dirección:          Calle colon n62 p6
+Código Postal:      11300
+Fecha de nacimiento:2003-05-14
+Me debe dinero:     true
+Cuánto:             10.0
+********************************************************************************
+Nombre:             Pepe Torres
+Teléfono:           612565487
+Dirección:          Calle pedrosa n62 p6
+Código Postal:      12333
+Fecha de nacimiento:1999-11-13
+Me debe dinero:     false
+Cuánto:             0.0
+********************************************************************************
+                           Fin De La Agenda De Contactos                            
+********************************************************************************
