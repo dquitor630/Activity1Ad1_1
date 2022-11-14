@@ -30,9 +30,12 @@ public class Main {
         xStream.addImplicitCollection(ListaContactos.class, "contacts");
         contacts = (ListaContactos) xStream.fromXML(new FileInputStream("src\\activity14\\contactos.xml"));
         contactList = contacts.getListaContactos();
+        representacionJson.append("[\n");
         for(Contacto c : contactList){
-            representacionJson.append(" ").append(gson.toJson(c));
+            representacionJson.append(" ").append(gson.toJson(c)).append(",");
         }
+        representacionJson.replace(representacionJson.length() - 1, representacionJson.length()," ");
+        representacionJson.append("\n]");
         writer.write(String.valueOf(representacionJson));
         writer.close();
     }

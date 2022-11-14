@@ -10,5 +10,6 @@
     <orderEntry type="library" name="thoughtworks.xstream" level="project" />
     <orderEntry type="library" name="thoughtworks.xstream1" level="project" />
     <orderEntry type="library" name="google.code.gson" level="project" />
+    <orderEntry type="library" name="google.code.gson" level="application" />
   </component>
 </module>
