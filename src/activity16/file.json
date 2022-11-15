@@ -1,0 +1,27 @@
+[
+ {
+  "contactName": "Diego Quirós",
+  "address": "Calle colon n62 p6",
+  "phone": 678239920,
+  "postalCode": 11300,
+  "birthDate": "14-05-2003",
+  "lease": true,
+  "leaseQuantity": 10.0
+}, {
+  "contactName": "Pepe Torres",
+  "address": "Calle pedrosa n62 p6",
+  "phone": 612565487,
+  "postalCode": 12333,
+  "birthDate": "13-11-1999",
+  "lease": false,
+  "leaseQuantity": 0.0
+} , {
+  "contactName": "Pepe Torres",
+  "address": "Calle pedrosa n62 p6",
+  "phone": 612565487,
+  "postalCode": 12333,
+  "birthDate": "13-11-1999",
+  "lease": false,
+  "leaseQuantity": 0.0
+}
+]
