@@ -1,5 +1,4 @@
 package activity15;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
@@ -24,15 +23,16 @@ public class Main {
         Gson gson = new GsonBuilder().registerTypeAdapter(LocalDate.class, new LocalDateSerializer()).create();
         final Type typeListContact = new TypeToken<List<Contacto>>(){}.getType();
         final List<Contacto> contacts;
-        int i;
         file.createNewFile();
         while ((line = buffRead.readLine()) != null){
             json.append(line).append("\n");
         }
         contacts = gson.fromJson(json.toString(), typeListContact);
-        buffWriter.write("********************************************************************************\n" +
-                "                              Agenda De Contactos                               \n" +
-                "********************************************************************************\n");
+        buffWriter.write("""
+                ********************************************************************************
+                                              Agenda De Contactos                              \s
+                ********************************************************************************
+                """);
         for(Contacto c : contacts){
             buffWriter.write("Nombre:             " + c.getContactName() + "\n");
             buffWriter.write("Teléfono:           " + c.getPhone() + "\n") ;

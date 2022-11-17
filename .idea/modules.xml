@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ActivitiesAd1_1.iml" filepath="$PROJECT_DIR$/ActivitiesAd1_1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../pr03-interrupt-dquitor630/Activity/Activity.iml" filepath="$PROJECT_DIR$/../pr03-interrupt-dquitor630/Activity/Activity.iml" />
     </modules>
   </component>
 </project>

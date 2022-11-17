@@ -19,7 +19,7 @@ public class Main {
         Matcher matcher;
         System.out.println("Please insert a name to search");
         name = keyboard.nextLine();
-        pattern =  Pattern.compile("\\s{2}\"contactName\":\\s\"" + name + "(.*)\\n(.*)\\n(.*)\\n(.*)\\n(.*)\\n(.*)\\n(.*)\\n");
+        pattern =  Pattern.compile("\\s{2}\"contactName\":\\s\"" + name + ".*\\n.*\\n.*\\n.*\\n.*\\n.*\\n.*\\n");
         while ((line = buffRead.readLine()) != null){
             json.append(line).append("\n");
         }
